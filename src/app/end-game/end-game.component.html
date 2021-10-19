@@ -1,0 +1,25 @@
+<div class="background"></div>
+<div class="textvictory" >{{whowin}}</div>
+<div class="container-1">
+  <a class="btn effect01" (click)="BackToMenu()" target="_blank"><span>Back to menu </span></a>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="output">
+				<div class="row friend" data-toggle="tooltip" data-placement="center" *ngFor="let hero of heroList">
+					<img src="/assets/fighter-7.jpg" alt="">
+					<div class="title">
+					  #{{heroList.indexOf(hero) + 1}}
+
+						{{hero.name}}
+
+					</div>
+          <div class="rank">
+            Wins: {{hero.rank}}
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,260 @@
+.background {
+  background-image: url("/assets/background-menu-street.jpg");
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rank {
+  margin-right: 20px;
+}
+.container-1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color:transparent;
+  padding:  40px 0px;
+  width: 240px;
+  position: absolute;
+  top: 40%;
+  left: 27%;
+}
+
+.container-2 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color:transparent;
+  padding:  40px 0px;
+  width: 240px;
+  position: absolute;
+  top: 40%;
+  left: 51%;
+}
+
+.container-3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color:transparent;
+  padding:  40px 0px;
+  width: 240px;
+  position: absolute;
+  top: 40%;
+  left: 75%;
+}
+h1 {
+  text-align: left;
+  color: #444;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.4em;
+  font-size: 1em;
+}
+
+p {
+  text-align: left;
+  color: #444;
+  letter-spacing: 0.05em;
+  font-size: 0.8em;
+  margin: 0 0 2em;
+}
+
+
+.btn {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 70px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn:hover {
+  text-decoration: none;
+}
+
+/*btn_background*/
+.effect01 {
+  color: #FFF;
+  border: 4px solid #000;
+  box-shadow:0px 0px 0px 1px #000 inset;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.effect01:hover {
+  border: 4px solid #666;
+  background-color: #FFF;
+  box-shadow:0px 0px 0px 4px #EEE inset;
+}
+
+/*btn_text*/
+.effect01 span {
+  transition: all 0.2s ease-out;
+  z-index: 2;
+}
+.effect01:hover span{
+  letter-spacing: 0.13em;
+  color: #333;
+}
+
+/*highlight*/
+.effect01:after {
+  background: #FFF;
+  border: 0px solid #000;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .8;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  width: 50px;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+  z-index: 1;
+}
+.effect01:hover:after {
+  background: #FFF;
+  border: 20px solid #000;
+  opacity: 0;
+  left: 120%;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+
+.input-gameId {
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  position: absolute;
+  top: 55%;
+  left: 51%;
+  display: block;
+  outline: none;
+  width: 300px;
+  height: 30p;
+  // top: 250px;
+  margin: 0 auto;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+}
+
+::-webkit-input-placeholder { color: rgb(0, 0, 0);}
+:-moz-placeholder { color: rgb(0, 0, 0); }
+::-moz-placeholder { color: rgb(0, 0, 0); }
+:-ms-input-placeholder { color: rgb(0, 0, 0); }
+
+
+
+#output {
+  position: absolute;
+  top: 5%;
+  left: 1%;
+	margin: 2rem auto;
+	padding: 2rem;
+	min-width: 400px;
+	width: 23%;
+
+	background: rgba(rgb(0, 0, 0), .8);
+
+	border-radius: 15px;
+
+	.search {
+		display: flex;
+		align-items: center;
+		padding: .25rem 1rem;
+		margin-bottom: 15px;
+
+		background: rgba(#fff, .2);
+
+		border: none;
+		border-radius: 999px;
+
+		transition: .3s all;
+
+		color: #fff;
+
+		&.active {
+			background: rgba(#fff, .9);
+			outline: none;
+			color: #444;
+		}
+
+		input[type=text] {
+			flex-grow: 1;
+			padding-left: .5rem;
+
+			color: inherit;
+
+			font-size: 1.25rem;
+
+			background: transparent;
+			border: none;
+
+			&:focus, &:active {
+				outline: none;
+			}
+		}
+	}
+
+	.row.friend {
+		display: flex;
+		align-items: center;
+		padding: 1rem;
+
+		color: white;
+
+		cursor: pointer;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		img {
+			display: inline;
+			width: 3rem;
+			height: 3rem;
+
+			border-radius: 999px;
+		}
+
+		.title {
+			flex-grow: 1;
+			padding: 0 .4rem;
+
+			display: inline;
+			font-size: 1.5rem;
+		}
+
+		.indicator {
+			min-width: 10px;
+			min-height: 10px;
+
+			background: rgba(#fff, .3);
+
+			border-radius: 999px;
+
+			&.online {
+				background: #0f9;
+			}
+
+			&.away {
+				background: #fc0;
+			}
+		}
+	}
+}

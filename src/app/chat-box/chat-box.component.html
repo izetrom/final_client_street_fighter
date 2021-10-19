@@ -1,0 +1,19 @@
+<div>
+  <div>
+    <p *ngFor="let message of messageHistory">
+      <span>[{{ message.username }}] </span>
+      <span>{{ message.text }}</span>
+    </p>
+  </div>
+  <div>
+    <form>
+      <mat-form-field class="input" appearance="outline">
+        <!-- <mat-label>Username</mat-label> -->
+        <input id="username" matInput type="text" required />
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">
+        <mat-icon>send</mat-icon>
+      </button>
+    </form>
+  </div>
+</div>

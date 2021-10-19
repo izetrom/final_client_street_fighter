@@ -1,0 +1,59 @@
+<div class="background">
+  <div class="box">
+    <h1 class="title">Street Fighter</h1>
+
+    <h2 class="subtitle">Join the fight !</h2>
+
+    <div class="form-wrapper" *ngIf="formType === 'login'">
+      <form (ngSubmit)="submitAuthForm()">
+        <p>
+          <mat-form-field class="input" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input name="username" id="username" matInput type="text" required [(ngModel)]="username" />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="input" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input name="password" id="password" matInput type="password" required [(ngModel)]="password" />
+          </mat-form-field>
+        </p>
+        <button mat-raised-button color="primary" class="button" type="submit">Login</button>
+        <p class="footer">
+          Don't have an account ?
+          <span class="footer-button" (click)="switchForm('createAccount')">Register</span>
+        </p>
+      </form>
+    </div>
+
+    <div class="form-wrapper" *ngIf="formType === 'createAccount'">
+      <form (ngSubmit)="submitAuthForm()">
+        <p>
+          <mat-form-field class="input" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input name="username" id="username" matInput type="text" required [(ngModel)]="username" />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="input" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input name="password" id="password" matInput type="password" required [(ngModel)]="password" />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="input" appearance="outline">
+            <mat-label>Confirm password</mat-label>
+            <input name="confirm-password" id="confirm-password" matInput type="password" required [(ngModel)]="confirmPassword" />
+          </mat-form-field>
+        </p>
+        <button mat-raised-button color="primary" class="button" type="submit">Register</button>
+        <p class="footer">
+          Already have an account ?
+          <span class="footer-button" (click)="switchForm('login')">Login</span>
+        </p>
+      </form>
+    </div>
+
+  </div>
+</div>
+

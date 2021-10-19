@@ -1,0 +1,94 @@
+<div class="background"></div>
+<div class="container-1">
+  <a class="btn effect01" target="_blank" (click)="createGameRoom()"><span>Create Game ! </span></a>
+</div>
+  <input class="input-gameId" type="text"  placeholder="Enter Game Id ! " required [(ngModel)]="gameId"/>
+<div class="container-2">
+  <a class="btn effect01" target="_blank" (click)="joinGameRoom()"><span>JOIN Game ! </span></a>
+</div>
+<div class="container-3">
+  <a class="btn effect01" target="_blank" (click)="createTrainingGameRoom()"><span>TRAINING Room </span></a>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="output">
+				<div class="search">
+					<i class="fa fa-fw fa-search"></i>
+					<input id="searchBar" type="text" placeholder="Add Friend !" [(ngModel)]="friendName" (keydown.enter)="searchFriend()">
+          <button mat-icon-button color="Primary" aria-label="Example icon button with a heart icon">
+            <mat-icon (click)="searchFriend()">add_circle</mat-icon>
+          </button>
+          <button mat-icon-button color="Primary" aria-label="Example icon button with a heart icon">
+            <mat-icon (click)="refreshFriends()"> refresh</mat-icon>
+          </button>
+				</div>
+				<div class="row friend" data-toggle="tooltip" data-placement="right" *ngFor="let friend of friends">
+					<img src="/assets/fighter-7.jpg" alt="">
+					<div class="title">
+						{{friend.name}}
+					</div>
+          <div class="rank">
+            wins: {{friend.rank}}
+          </div>
+          <button *ngIf="friend.isOnGame" title="Join Friend Game"  mat-icon-button color="warn">
+            <mat-icon (click)="joinGameFriend(friend.gameId)">play_circle_outline</mat-icon>
+          </button>
+					<span title="{{friend.state}}" class="indicator {{friend.state}}"></span>
+          <button title="Delete Friend" id="{{friend.name}}" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+            <mat-icon (click)="removeFriend(friend.name)">close</mat-icon>
+          </button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+	<!-- <div class="row friend" data-toggle="tooltip" data-placement="right" title="online">
+					<img src="http://lorempixel.com/500/500/people/" alt="">
+					<div class="title">
+						darkmatter
+					</div>
+					<span class="indicator online"></span>
+				</div>
+				<div class="row friend" data-toggle="tooltip" data-placement="right" title="online">
+					<img src="http://lorempixel.com/500/500/people/" alt="">
+					<div class="title">
+						super~kawaii~347
+					</div>
+					<span class="indicator online"></span>
+				</div>
+				<div class="row friend" data-toggle="tooltip" data-placement="right" title="offline">
+					<img src="http://lorempixel.com/500/500/people/" alt="">
+					<div class="title">
+						xXxURMOMxXx
+					</div>
+					<span class="indicator"></span>
+				</div>
+				<div class="row friend" data-toggle="tooltip" data-placement="right" title="online">
+					<img src="http://lorempixel.com/500/500/people/" alt="">
+					<div class="title">
+						3dgySh4dow5me
+					</div>
+					<span class="indicator online"></span>
+				</div>
+				<div class="row friend" data-toggle="tooltip" data-placement="right" title="away">
+					<img src="http://lorempixel.com/500/500/people/" alt="">
+					<div class="title">
+						bamforion
+					</div>
+					<span class="indicator away"></span>
+				</div>
+				<div class="row friend" data-toggle="tooltip" data-placement="right" title="offline">
+					<img src="http://lorempixel.com/500/500/people/" alt="">
+					<div class="title">
+						TestAccountPlsIgnore
+					</div> -->
+					<!-- <span class="indicator"></span>
+				</div> -->
