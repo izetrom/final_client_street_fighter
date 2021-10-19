@@ -510,16 +510,11 @@ export class RoomPageComponent implements OnInit {
     this.sub = this.route.paramMap.subscribe(params => {
       this.gameId = params.get('id') || "";
     });
-    console.log("game id mec : " + this.gameId);
   }
 
   HandleEndGame(message: any): void {
-    console.log("endgame");
     if (this.phaserGame != undefined)
       this.phaserGame.destroy(true, false);
-    else
-      console.log("wtf");
-    let i = 0;
     if (message.looser)
       this.router.navigate(['/endgame']);
   }
