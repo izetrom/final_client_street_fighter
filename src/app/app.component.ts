@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.wsSubscription =
-      this.wsService.createObservableSocket("ws://localhost:9000/")
+      this.wsService.createObservableSocket("ws://street-fighter-is-back.herokuapp.com/")
        .subscribe(
         data => this.messageFromServer = data,
          err => console.log( 'err'),
